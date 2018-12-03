@@ -1,0 +1,32 @@
+********************* 10/11/2018 *************************************************************************************
+* Start																												 *
+* Stworzono komunikacje po sockecie. Duzo czasu zmarnowane bo buforowanie stdout w c++ jest dziwne xD                *
+* nalezy pamietac ze trzeba konczyc string znakiem \n lub wywolac std::flush() bo innym razem string jest w buforze  *
+* i nie wyswietli nam on tego na ekranie																			 *
+* -------------------------------------------------------------------------------------------------------------------*
+*																													 *
+* TODO: 																											 *
+*	- przepisac na klase, ogarnac wiecej polaczen w tym samym czasie (threading?) [Y]								 *
+*	- zaczac ftpa																  [Y]								 *
+**********************************************************************************************************************
+
+******************** 11/11/2018 **************************************************************************************
+* Ogarnieto komunikacje z socketami, tzn odbieranie i wysylanie danych przez socket, funkcje: recv() oraz send()     *
+* Zaczeto przepisywac funkcje main() na klasy, tzn: stworzenie klasy serwera ale g++ motzno i byly problemy z        *
+* linkowaniem. Nalezy pamietac, zeby podawac linkerowi sciezki do plikow .cpp tak zeby mogl je skompilowac           *
+* Jesli tego nie zrobimy to w funkcji main() nie beda widoczne stworzone klasy bo nie zostaly one skompilowane       *
+*																													 *
+* Dodatkowo stworzono skrypt main.sh, ktory znajujde wszystkie pliki .cpp w projekcie i dodaje je do linkera         *
+**********************************************************************************************************************
+
+******************* 12/11/2018 ***************************************************************************************
+* Przepisano main() na klase i stworzono klase Command(). Walka z przekazaniem stringa do metody send() z naglowka   *
+* <sys/socket.h>                                                                                                     *
+**********************************************************************************************************************
+
+****************** 25/11/2018 ****************************************************************************************
+* Ogarnieto komende PUT do wrzucania plikow na serwer                                                                *
+* Napisana klasa do ogarniecia operacji na plikach                                                                   *
+* Przepisano ify z komendami na std::map                                                                             *
+* Zaczeto autentykacje -> trzeba poczytac jak to zrobic po ludzku :)                                                 *
+**********************************************************************************************************************
